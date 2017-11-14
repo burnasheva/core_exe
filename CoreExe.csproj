@@ -6,4 +6,7 @@
   <ItemGroup>
     <PackageReference Include="FluentDateTime" Version="1.14.0" />
   </ItemGroup>
+  <Target Name="Run">
+    <Message Text="$(myVar)"/>
+  </Target>
 </Project>

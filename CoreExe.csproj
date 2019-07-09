@@ -8,5 +8,6 @@
   </ItemGroup>
   <Target Name="Msg">
     <Message Text="$(myVar)"/>
+    <Message Text="$(myVarList)"/>
   </Target>
 </Project>

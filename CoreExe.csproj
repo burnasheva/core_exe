@@ -18,4 +18,10 @@
             Overwrite="true"
             Encoding="Unicode"/>
   </Target>
+  <Target Name="OutPropertiesToItemGroup">
+    <CreateItem Include="$(myVarSemicolon)">
+      <Output TaskParameter="Include" ItemName="out"/>
+    </CreateItem>
+    <Message Text="%(out.Identity)"/>
+  </Target>
 </Project>

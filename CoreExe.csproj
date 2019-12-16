@@ -6,6 +6,7 @@
   <ItemGroup>
     <PackageReference Include="FluentDateTime" Version="1.14.0" />
     <MyTextFile Include="Items.txt"/>
+    <Splitted Include="$(myVarSemicolon.Split(';'))" />
   </ItemGroup>
   <Target Name="Msg">
     <Message Text="$(myVar)" />
@@ -19,9 +20,6 @@
             Encoding="Unicode"/>
   </Target>
   <Target Name="OutPropertiesToItemGroup">
-    <CreateItem Include="$(myVarSemicolon)">
-      <Output TaskParameter="Include" ItemName="out"/>
-    </CreateItem>
-    <Message Text="%(out.Identity)"/>
+    <Message Text="%(Splitted.Identity)"/>
   </Target>
 </Project>

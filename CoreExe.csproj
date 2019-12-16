@@ -1,13 +1,21 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <OutputType>Exe</OutputType>
-    <TargetFramework>netcoreapp2.0</TargetFramework>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="FluentDateTime" Version="1.14.0" />
+    <MyTextFile Include="Items.txt"/>
   </ItemGroup>
   <Target Name="Msg">
-    <Message Text="$(myVar)"/>
-    <Message Text="$(myVarList)"/>
+    <Message Text="$(myVar)" />
+    <Message Text="$(myVarList)" />
+  </Target>
+  <Target Name="WriteToFile">
+    <WriteLinesToFile
+            File="@(MyTextFile)"
+            Lines="$(myVarSemicolon)"
+            Overwrite="true"
+            Encoding="Unicode"/>
   </Target>
 </Project>

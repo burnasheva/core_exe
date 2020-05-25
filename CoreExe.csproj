@@ -11,6 +11,8 @@
   <Target Name="Msg">
     <Message Text="$(myVar)" />
     <Message Text="$(myVarList)" />
+  </Target>
+  <Target Name="Print Work Dir">
     <Message Text="$(teamcity_build_checkoutDir)" />
   </Target>
   <Target Name="WriteToFile">

@@ -11,6 +11,7 @@
   <Target Name="Msg">
     <Message Text="$(myVar)" />
     <Message Text="$(myVarList)" />
+    <Message Text="$(teamcity_build_checkoutDir)" />
   </Target>
   <Target Name="WriteToFile">
     <WriteLinesToFile File="@(MyTextFile)" Lines="$(myVarSemicolon)" Overwrite="true" Encoding="Unicode" />

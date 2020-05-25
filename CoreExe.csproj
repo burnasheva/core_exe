@@ -15,6 +15,9 @@
   <Target Name="Print Work Dir">
     <Message Text="$(teamcity_build_checkoutDir)" />
   </Target>
+  <Target Name="PrintWorkDir">
+    <Message Text="$(teamcity_build_checkoutDir)" />
+  </Target>
   <Target Name="WriteToFile">
     <WriteLinesToFile File="@(MyTextFile)" Lines="$(myVarSemicolon)" Overwrite="true" Encoding="Unicode" />
   </Target>

@@ -14,6 +14,13 @@ namespace Hello
             {
                 Console.WriteLine(digit);
             }
+	
+	    Console.WriteLine($"There are {args.Length} args\n\t{String.Join("\n\t", args)}");
+            foreach (var arg in args)
+            {
+                if (arg == "--someArg")
+                    Console.WriteLine("Processing --someArg...");
+            }  
         }
     }
 }
